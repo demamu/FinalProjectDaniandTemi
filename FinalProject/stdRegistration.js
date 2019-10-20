@@ -62,7 +62,7 @@ let role = {
 function allCourses() {
   let courseDB = [];
   courseDB.push(new Course("001", "Math", "FM 300"));
-  courseDB.push(new Course("002", "English", "FM302"));
+  courseDB.push(new Course("002", "Physics", "FM302"));
   courseDB.push(new Course("003", "Science", "FM303"));
   courseDB.push(new Course("004", "Social Studies ", "FM304"));
   courseDB.push(new Course("005", " Foreign Language", "FM305"));
@@ -73,6 +73,7 @@ function allCourses() {
  *@returns {string} the course code
  */
 function displayAllCourses() {
+  
   let table = document.querySelector("table");
   let data = Object.keys(allCourses()[0]);
   generateTableHead(table, data);
@@ -84,7 +85,8 @@ function displayAllCourses() {
  * @returns {string} the course code
  */
 function sortCourseName() {
-    // document.querySelector("table").innerHTML="";
+  
+  document.querySelector("table").innerHTML="";
   let table = document.querySelector("table");
   let data = Object.keys(allCourses()[0]);
   generateTableHead(table, data);
@@ -95,7 +97,7 @@ function sortCourseName() {
  * @returns {string} the course code
  */
 function sortCourseCode(){
-    // document.querySelector("table").innerHTML="";
+  document.querySelector("table").innerHTML="";
     let table = document.querySelector("table");
     let data = Object.keys(allCourses()[0]);
     generateTableHead(table, data);
@@ -110,6 +112,7 @@ function sortCourseCode(){
  * @returns {Array} sorted object by spacify key
  */
 function sortObjectBySome(arr, bysome) {
+  
   if(bysome=="first"){
   return arr.sort((aval, bval) => { if(aval._firstName > bval._firstName){return 1;}else{return -1;}});
   }else if(bysome=="last"){
@@ -429,7 +432,7 @@ function allUsers(){
     let std1=new Student("Daniel","Nigussie","320-532","dnigussie@mum.edu","dani123","std111","2019","3.9");
          std1.setCourse(new Course("1", "Math", "FM 300"));
     let std2=new Student("Temesgen","Assefa","234-435","teassefa@mum.edu","teme123","std222","2019","4");
-         std2.setCourse(new Course("2", "English", "FM302"));
+         std2.setCourse(new Course("2", "Physics", "FM302"));
     userDB.push(new Admin("Bernie","Alnso","321-403","balnso@mum.edu","pass123","admin111"));
     userDB.push(std1);
     userDB.push(new Faculty("Anthony","Martial","546-444","amartial@mum.edu","pass123","fuc321","registral"));
@@ -444,6 +447,7 @@ function allUsers(){
  * @returns {string} all user
  */
 function sortFuctByFirstName(){
+  document.querySelector("table").innerHTML="";
   let temp=[];
     for(let ob of allUsers()){
         if(ob.getRole()==role.fuculty){
@@ -462,6 +466,7 @@ function sortFuctByFirstName(){
  * @returns {string} all user
  */
 function sortFuctByLastName(){
+  document.querySelector("table").innerHTML="";
   let temp=[];
     for(let ob of allUsers()){
         if(ob.getRole()==role.fuculty){
@@ -480,6 +485,7 @@ function sortFuctByLastName(){
  * @returns {string} all user
  */
 function sortStdByFirstName(){
+  document.querySelector("table").innerHTML="";
   let temp=[];
     for(let ob of allUsers()){
         if(ob.getRole()==role.student){
@@ -498,6 +504,7 @@ function sortStdByFirstName(){
  * @returns {string} all user
  */
 function sortStdByLastName(){
+  document.querySelector("table").innerHTML="";
   let temp=[];
     for(let ob of allUsers()){
         if(ob.getRole()==role.student){
@@ -514,7 +521,7 @@ function sortStdByLastName(){
 /**
  * Input: the user enters email and password 
  * Process: If the email and password matches with what it is in the array 
- * output: it will direct you to the admin,facality or student page
+ * output: it will direct you to the admin,faculty or student page
  * @returns {string} all user
  */
 function loginBtn(){
@@ -617,6 +624,7 @@ function displayAllStudent(){
  * @returns {string} all user
  */
 function displayAllFuculty(){
+  
     let temp=[];
     for(let ob of allUsers()){
         if(ob.getRole()==role.fuculty){
