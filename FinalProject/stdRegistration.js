@@ -61,11 +61,11 @@ let role = {
  */
 function allCourses() {
   let courseDB = [];
-  courseDB.push(new Course("1", "Java1", "cs301"));
-  courseDB.push(new Course("2", "OOP", "cs302"));
-  courseDB.push(new Course("5", "MWA", "cs549"));
-  courseDB.push(new Course("3", "Data Stracture", "cs304"));
-  courseDB.push(new Course("4", "FPP", "cs401"));
+  courseDB.push(new Course("001", "Math", "FM 300"));
+  courseDB.push(new Course("002", "English", "FM302"));
+  courseDB.push(new Course("003", "Science", "FM303"));
+  courseDB.push(new Course("004", "Social Studies ", "FM304"));
+  courseDB.push(new Course("005", " Foreign Language", "FM305"));
   return courseDB;
 }
 /**
@@ -138,8 +138,8 @@ function generateTableHead(table, data) {
     th.appendChild(text);
     row.appendChild(th);
   }
-  row.style.color = "blue";
-  row.style.background = "orange";
+  row.style.color = "white";
+  row.style.background = "rgb(0, 71, 179)";
 }
 /**
  *Output: It creates head of table
@@ -426,15 +426,15 @@ setCourse(course){
  */
 function allUsers(){
     let userDB=[];
-    let std1=new Student("Abel","Nedi","320-532","anedi@mum.edu","pass123","std111","2018","3.9");
-         std1.setCourse(new Course("1", "Java1", "cs301"));
-    let std2=new Student("Seble","Aygoda","234-435","saygoda@mum.edu","pass123","std222","2018","3.9");
-         std2.setCourse(new Course("2", "OOP", "cs302"));
-    userDB.push(new Admin("John","Heglin","321-403","jheglin@mum.edu","pass123","admin111"));
+    let std1=new Student("Daniel","Nigussie","320-532","dnigussie@mum.edu","dani123","std111","2019","3.9");
+         std1.setCourse(new Course("1", "Math", "FM 300"));
+    let std2=new Student("Temesgen","Assefa","234-435","teassefa@mum.edu","teme123","std222","2019","4");
+         std2.setCourse(new Course("2", "English", "FM302"));
+    userDB.push(new Admin("Bernie","Alnso","321-403","balnso@mum.edu","pass123","admin111"));
     userDB.push(std1);
-    userDB.push(new Faculty("Tina","Rock","546-444","trock@mum.edu","pass123","fuc321","registral"));
-    userDB.push(new Faculty("Sol","Jack","435-455","sjack@mum.edu","pass123","fuc123","registral"));
-    userDB.push(new Admin("Mark","Gutri","435-403","mgutri@mum.edu","pass123","admin222"));
+    userDB.push(new Faculty("Anthony","Martial","546-444","amartial@mum.edu","pass123","fuc321","registral"));
+    userDB.push(new Faculty("lebron","curry","435-455","lcurry@mum.edu","pass123","fuc123","registral"));
+    userDB.push(new Admin("Klay","Russel","435-403","krussel@mum.edu","pass123","admin222"));
     userDB.push(std2);
     
     return userDB;
@@ -458,7 +458,7 @@ function sortFuctByFirstName(){
 
 }
 /**
- * output:sorts fafcality by last name
+ * output:sorts fafaculty by last name
  * @returns {string} all user
  */
 function sortFuctByLastName(){
@@ -529,7 +529,7 @@ function loginBtn(){
     }
    // console.log(temp);
     if(temp==null){
-        window.alert("your password and email does not mathch");
+        window.alert("your password and email does not match");
     }else{console.log(temp);
         if(temp.getRole()==role.student){
            // window.alert("success");
