@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Course Assign</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="stdRegistration.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg "
+      style="background-color: mediumseagreen;"
+    >
+      <div class="container">
+        <!-- <a class="navbar-brand" href="cars.html">Cars</a> -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="">signUp</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br /><br />
+
+    <div class="container">
+      <div class="row">
+        <h2>Course Assign to Student</h2>
+        <div class="container">
+          <form>
+            <div class="form-group row">
+              <label for="emailid" class="col-sm-2 col-form-label"
+                >Student Email</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailid"
+                  placeholder="Student Email"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Select Course</label>
+              <div class="col-sm-10">
+                <select id="ddlViewBy" class="form-control">
+                  <option value="1">Java1</option>
+                  <option value="2">OOP</option>
+                  <option value="3">Data Stracture</option>
+                  <option value="4">FPP</option>
+                  <option value="5">MWA</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="btn-danger" id="loginerror"></div>
+            <br />
+            <div class="form-group ">
+              <div class="offset-sm-2 col-sm-10">
+                <button class="btn btn-primary" onclick="assignCourse()">
+                  Assign
+                </button>
+                <a class="btn btn-primary" href="studentCourse.html"
+                  >Student Course</a
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <p>
+      <a href="https://validator.w3.org/check/referer">
+        <img
+          src="http://mumstudents.org/cs472/images/w3c-html.png"
+          alt="Validate"
+        />
+      </a>
+      <!-- <a href="https://webster.cs.washington.edu/jslint/?referer">
+        <img
+          src="https://webster.cs.washington.edu/w3c-js.png"
+          alt="Valid JS"
+        />
+      </a> -->
+    </p>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="stdRegistration.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg "
+      style="background-color: lightsalmon;"
+    >
+      <div class="container">
+        <!-- <a class="navbar-brand" href="cars.html">Cars</a> -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="">signUp</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br /><br />
+
+    <div class="container">
+      <div class="row">
+        <h2>Login</h2>
+        <div class="container">
+          <form>
+            <div class="form-group row">
+              <label for="emailid" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailid"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="passwordid" class="col-sm-2 col-form-label"
+                >Password</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="passwordid"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+            <div class="btn-danger" id="loginerror"></div>
+            <br /><br /><br /><br />
+            <div class="form-group ">
+              <div class="offset-sm-2 col-sm-10">
+                <!-- <button class="btn btn-primary" onclick="loginBtn()">Log in</button> -->
+                <button class="btn btn-primary" onclick="loginBtn()">
+                  Log in
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <p>
+      <a href="http://validator.w3.org/check/referer">
+        <img
+          src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png"
+          alt="html validator"
+        />
+      </a>
+      <!-- <a href="https://webster.cs.washington.edu/jslint/?referer">
+        <img
+          src="https://webster.cs.washington.edu/w3c-js.png"
+          alt="Valid JS"
+        />
+      </a> -->
+    </p>
+  </body>
+</html>
